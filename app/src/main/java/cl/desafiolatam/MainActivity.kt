@@ -37,8 +37,9 @@ class MainActivity : AppCompatActivity() {
                 listaAdapter.setupData(lista!!)
             }
         buttonInverso.setOnClickListener{
-            listaAdapter.setupData(lista!!)
-            lista!!.asReversed()
+            val asReversed = lista!!.reversed()
+            listaAdapter.setupData(asReversed)
+
         }
         }
 

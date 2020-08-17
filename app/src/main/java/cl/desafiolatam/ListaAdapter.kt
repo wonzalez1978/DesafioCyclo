@@ -10,7 +10,7 @@ import cl.desafiolatam.R
 class ListaAdapter(private val context: Context) :
     RecyclerView.Adapter<ViewHolder>() {
 
-    var items: ArrayList<Ciclovia>? = null
+    var items: List<Ciclovia>? = null
     // Gets the number of animals in the list
     override fun getItemCount(): Int {
         return items!!.size
@@ -30,7 +30,7 @@ class ListaAdapter(private val context: Context) :
         holder?.comuna?.text = items!![position].comuna
     }
 
-    fun setupData(lista: ArrayList<Ciclovia>) {
+    fun setupData(lista: List<Ciclovia>) {
         items = lista
         notifyDataSetChanged()
     }
